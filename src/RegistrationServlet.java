@@ -20,7 +20,7 @@ public class RegistrationServlet extends HttpServlet{
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println(config.getInitParameter("name"));
 		super.init(config);
-		System.out::println();
+		
 	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -29,7 +29,7 @@ public class RegistrationServlet extends HttpServlet{
 		out.write("Hello: " + req.getParameter("p1"));
 		System.out.println("hello");
 		//System.out.println(req.getAttribute("p1"));
-		System.out.println("Hello: " + req.getParameter("p1"));
+		System.out.println("Hello : " + req.getParameter("p1"));
 		req.setAttribute("name", "Gaurav");
 		RequestDispatcher rd = req.getRequestDispatcher("Output");
 		
